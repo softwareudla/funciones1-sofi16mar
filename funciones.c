@@ -3,7 +3,7 @@
 #include "funciones.h"
 
 // Ingresar los Productos
-void ingresarProducto(char nombres[][50], float precios[], int cantidad) {
+void ingresarProducto(char nombres[10][50], float precios[10], int cantidad) {
     for (int i = 0; i < cantidad; i++) {
         printf("Ingrese el nombre del producto %d: ", i + 1);
         scanf("%s", nombres[i]);
@@ -13,7 +13,7 @@ void ingresarProducto(char nombres[][50], float precios[], int cantidad) {
 }
 
 // Mostrar los Productos
-void mostrarProductos(char nombres[][50], float precios[], int cantidad) {
+void mostrarProductos(char nombres[10][50], float precios[10], int cantidad) {
     printf("Productos ingresados:\n");
     for (int i = 0; i < cantidad; i++) {
         printf("Producto: %s, Precio: %.2f\n", nombres[i], precios[i]);
@@ -21,7 +21,7 @@ void mostrarProductos(char nombres[][50], float precios[], int cantidad) {
 }
 
 // Calcular Precio Total
-float calcTotal(float precios[], int cantidad) {
+float calcTotal(float precios[10], int cantidad) {
     float total = 0;
     for (int i = 0; i < cantidad; i++) {
         total += precios[i];
@@ -30,13 +30,13 @@ float calcTotal(float precios[], int cantidad) {
 }
 
 // Calcular el Precio Promedio
-float calcPromedio(float precios[], int cantidad) {
+float calcPromedio(float precios[10], int cantidad) {
     if (cantidad == 0) return 0;
     return calcTotal(precios, cantidad) / cantidad;
 }
 
 // Buscar por nombre
-void buscarProducto(char nombreBuscado[], char nombres[][50], float precios[], int cantidad) {
+void buscarProducto(char nombreBuscado[10], char nombres[10][50], float precios[10], int cantidad) {
     int encontrado = 0;
     for (int i = 0; i < cantidad; i++) {
         if (strcmp(nombres[i], nombreBuscado) == 0) {
@@ -51,7 +51,7 @@ void buscarProducto(char nombreBuscado[], char nombres[][50], float precios[], i
 }
 
 // Encontrar el producto más caro y el más barato
-void encontrarMaxMin(float precios[], char nombres[][50], int cantidad) {
+void encontrarMaxMin(float precios[10], char nombres[10][50], int cantidad) {
     int maxIdx = 0, minIdx = 0;
     for (int i = 1; i < cantidad; i++) {
         if (precios[i] > precios[maxIdx]) maxIdx = i;
