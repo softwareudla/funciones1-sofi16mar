@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <string.h>
 #include "funciones.h"
@@ -8,7 +7,6 @@ void ingresarProducto(char nombres[10][50], float precios[10], int cantidades[10
     for (int i = 0; i < cantidad; i++) {
         printf("Ingrese el nombre del producto %d: ", i + 1);
         fgets(nombres[i], 50, stdin); 
-        
 
         do {
             printf("Ingrese el precio del producto %d (no puede ser negativo): ", i + 1);
