@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "funciones.h"
+#include "funciones.h" 
 
 #define maxproduc 10
 
@@ -26,7 +26,7 @@ int main() {
         return 1;
     }
 
-    ingresarProducto(nombres, precios, cantidades, cantidad);
+    ingresarProducto(nombres, precios, cantidades, cantidad);  // Función definida en funciones.c
     mostrarProductos(nombres, precios, cantidades, cantidad);
     printf("Precio total: %.2f\n", calcTotal(precios, cantidades, cantidad));
     printf("Precio promedio: %.2f\n", calcPromedio(precios, cantidades, cantidad));
