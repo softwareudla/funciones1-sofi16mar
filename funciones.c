@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "funciones.h"
+#include "funciones.h"  // Asegúrate de incluir el encabezado
 
 // Ingresar los Productos
 void ingresarProducto(char nombres[10][50], float precios[10], int cantidades[10], int cantidad) {
